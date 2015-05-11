@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-kdbusaddons"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 DBus library"
+DESCRIPTION="KDBusAddons provides convenience classes on top of QtDBus, as well
+as an API to create KDED modules."
+
+PKG_NAMES="libKF5DBusAddons5 libKF5DBusAddons-devel"
+libKF5DBusAddons5_CONTENTS="
+	usr/bin/cygKF5DBusAddons-5.dll
+	usr/bin/kquitapp5.exe
+	usr/share/doc/
+	usr/share/locale/
+"
+libKF5DBusAddons_devel_REQUIRES="libQt5Core-devel libQt5X11Extras-devel"
+libKF5DBusAddons_devel_CONTENTS="
+	usr/include/KF5/KDBusAddons/
+	usr/include/KF5/kdbusaddons_version.h
+	usr/lib/cmake/KF5DBusAddons/
+	${QT5_MKSPECSDIR#/}/modules/qt_KDBusAddons.pri
+	usr/lib/libKF5DBusAddons.dll.a
+"
