@@ -1,14 +1,14 @@
-inherit kf5
+inherit kf5 python2 python3
 
 NAME="kf5-kdbusaddons"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 DBus library"
 DESCRIPTION="KDBusAddons provides convenience classes on top of QtDBus, as well
 as an API to create KDED modules."
 
-PKG_NAMES="libKF5DBusAddons5 libKF5DBusAddons-devel"
+PKG_NAMES="libKF5DBusAddons5 libKF5DBusAddons-devel python2-pykf5-kdbusaddons python3-pykf5-kdbusaddons"
 libKF5DBusAddons5_CONTENTS="
 	usr/bin/cygKF5DBusAddons-5.dll
 	usr/bin/kquitapp5.exe
@@ -22,4 +22,7 @@ libKF5DBusAddons_devel_CONTENTS="
 	usr/lib/cmake/KF5DBusAddons/
 	${QT5_MKSPECSDIR#/}/modules/qt_KDBusAddons.pri
 	usr/lib/libKF5DBusAddons.dll.a
+	usr/share/sip/PyKF5/KDBusAddons/
 "
+python2_pykf5_kdbusaddons_CONTENTS="${PYTHON2_SITELIB#/}/PyKF5/KDBusAddons.dll"
+python3_pykf5_kdbusaddons_CONTENTS="${PYTHON3_SITELIB#/}/PyKF5/KDBusAddons.dll"
