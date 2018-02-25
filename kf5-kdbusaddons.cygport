@@ -1,7 +1,7 @@
 inherit kf5 python2 python3
 
 NAME="kf5-kdbusaddons"
-VERSION=5.39.0
+VERSION=5.43.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 DBus library"
@@ -10,6 +10,7 @@ as an API to create KDED modules."
 
 PKG_NAMES="libKF5DBusAddons5 libKF5DBusAddons-devel python2-pykf5-kdbusaddons python3-pykf5-kdbusaddons"
 libKF5DBusAddons5_CONTENTS="
+	etc/xdg/kdbusaddons.categories
 	usr/bin/cygKF5DBusAddons-5.dll
 	usr/bin/kquitapp5.exe
 	usr/share/doc/
